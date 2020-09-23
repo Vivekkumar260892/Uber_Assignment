@@ -9,7 +9,7 @@
 
 a) Data Model:
 
-My data model consists of three tables. Each of these tables have been extracted from the log file provided. The below image explains the column types and relationships between the tables. The Fact table has an ID column as auto increment which is the primary key of the table. The vehicle and function dimanesions have their primary keys as vehicle_id and function_id respectively. At this stage I am assuming the dimensions are not slowly changing dimensions but only contain details about the vehicles and functions. I have created the other columns in both the dimensions as examples to show how these dimensions can hold information about the vehicles and functions.
+My data model consists of three tables. Each of these tables have been extracted from the log file provided. The below image explains the column types and relationships between the tables. The Fact table has an ID column as auto increment which is the primary key of the table. The vehicle and function dimensions have their primary keys as vehicle_id and function_id respectively. At this stage I am assuming the dimensions are not slowly changing dimensions but only contain details about the vehicles and functions. I have created the other columns in both the dimensions as examples to show how these dimensions can hold information about the vehicles and functions.
 
 
 
