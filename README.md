@@ -1,4 +1,5 @@
 # Uber Take Home Exercise
+## Topics
 1)	Idea behind the ETL model and Assumptions
 2)  Requirements
 3)	Steps for Running/Deploying the application
