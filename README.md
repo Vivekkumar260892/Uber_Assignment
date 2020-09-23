@@ -32,6 +32,7 @@ The data from the S3 bucket is loaded into a spark dataframe using the code and 
 
 The diagram below explains the connections between S3, Databricks and Redshift.
 
+
                             ┌───────┐
        ┌───────────────────>│  S3   │<─────────────────┐
        │    IAM or keys     └───────┘    IAM or keys   │
@@ -48,8 +49,4 @@ The diagram below explains the connections between S3, Databricks and Redshift.
         (SSL enabled by default)
         
   
-
-
-
-
-
+  
