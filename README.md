@@ -48,7 +48,8 @@ The diagram below explains the connections between S3, Databricks and Redshift.
         (SSL enabled by default)
         
   
-You need an intermediate S3 bucket where both Databricks and Redshift need to save temporary files for communication. You need to assign the Redshift cluster an IAM role with S3 Allaccess privileges for reading and writing data to S3.
+
+
 
 
 
