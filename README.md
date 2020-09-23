@@ -1,8 +1,9 @@
 # Uber Take Home Exercise
 ## Topics
-### 1)	Idea behind the ETL model and Assumptions
-### 2)  Requirements
-### 3)	Steps for Running/Deploying the application
+### 1)	ETL model and Assumptions
+### 2)  ETL Architecture
+### 3)  Requirements
+### 4)	Steps for Running/Deploying the application
 
 
 1. Idea behind the ETL model and Assumptions:
@@ -16,7 +17,38 @@ My data model consists of three tables. Each of these tables have been extracted
 <img src="Uber_Assignment.PNG" width="700" height="350">
 
 
-b) Services leveraged:
+2) ETL Architecture:
+
+a) Services leveraged:
 
 I have created an ETL process using AWS S3, AWS Redshift and Databricks platforms.
 I have used AWS S3 buckets as the source of the data. Databricks clusters are being used to extract and transform the data using python and spark apis. Finally, Redshift for loading the data in a warehouse, that holds the data. The code for the whole process is one single databricks notebook (python/ipynb file). This notebook integrates all the services together using different libraries in python and databricks.
+
+b) Architecture diagram:
+
+The python program extracts data stored in an S3 bucket. You need to spinup a Databricks cluster to run the code using the free service on the community edition. The S3 bucket is mounted on the Databricks cluster you are running your code on. You need to install the JDBC coonector for Redshift which is available as a jar file on the AWS website. I have provided the link and method of installation below in the requirements section. 
+
+The data from the S3 bucket is loaded into a spark dataframe using the code and the transformation is performed on the Databricks cluster. After the transformation is complete the tables are created on the Redshift database you have assigned and the data is loaded to the tables. The first time you run the code, the tables are created and the data is loaded. Every other time when you run the code, the data is appended to the existing tables.
+
+The diagram below explains the connections between S3, Databricks and Redshift.
+
+                            ┌───────┐
+       ┌───────────────────>│  S3   │<─────────────────┐
+       │    IAM or keys     └───────┘    IAM or keys   │
+       │                        ^                      │
+       │                        │ IAM or keys          │
+       v                        v               ┌──────v────┐
+┌────────────┐            ┌───────────┐         │┌──────────┴┐
+│  Redshift  │            │  Spark    │         ││   Spark   │
+│            │<──────────>│  Driver   │<────────>| Executors │
+└────────────┘            └───────────┘          └───────────┘
+               JDBC with                  Configured
+               username /                     in
+               password                     Spark
+        (SSL enabled by default)
+        
+  
+You need an intermediate S3 bucket where both Databricks and Redshift need to save temporary files for communication. You need to assign the Redshift cluster an IAM role with S3 Allaccess privileges for reading and writing data to S3.
+
+
+
