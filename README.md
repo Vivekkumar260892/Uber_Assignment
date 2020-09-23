@@ -17,6 +17,8 @@ My data model consists of three tables. Each of these tables have been extracted
 <img src="Uber_Assignment.PNG" width="700" height="350">
 
 
+b) Assumptions: ----------
+
 2) ETL Architecture:
 
 a) Services leveraged:
