@@ -16,6 +16,7 @@ My data model consists of three tables. Each of these tables have been extracted
 <img src="Uber_Assignment.PNG" width="700" height="350">
 
 
-b) Services leveraged
+b) Services leveraged:
+
 I have created an ETL process using AWS S3, AWS Redshift and Databricks platforms.
 I have used AWS S3 buckets as the source of the data. Databricks clusters are being used to extract and transform the data using python and spark apis. Finally, Redshift for loading the data in a warehouse, that holds the data. The code for the whole process is one single databricks notebook (python/ipynb file). This notebook integrates all the services together using different libraries in python and databricks.
