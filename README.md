@@ -27,16 +27,24 @@ I have used AWS S3 buckets as the source of the data. Databricks clusters are be
 b) Architecture diagram:
 
 The python program extracts data stored in an S3 bucket. You need to spinup a Databricks cluster to run the code using the free service on the community edition. The S3 bucket is mounted on the Databricks cluster you are running your code on. You need to install the JDBC coonector for Redshift which is available as a jar file on the AWS website.
-The data source uses Amazon S3 buckets to efficiently transfer data in and out of Redshift, and uses JDBC to automatically trigger the appropriate COPY and UNLOAD commands on Redshift.
+The data source uses Amazon S3 buckets to efficiently transfer data in and out of Redshift, and uses JDBC to automatically trigger the appropriate COPY and UNLOAD commands on Redshift. The spark ecosystem is configured and ready to use on you Databricks cluster.
+
+The data source reads and writes data to S3 when transferring data to/from Redshift. As a result, it requires AWS credentials with read and write access to an S3 bucket (specified using the tempdir configuration parameter). You need to assign a role to your Redshift cluster with S3 Allaccess for this process.
 
 I have provided the link and method of installation for the JDBC connector below in the requirements section. 
-
-The data from the S3 bucket is loaded into a spark dataframe using the code and the transformation is performed on the Databricks cluster. After the transformation is complete the tables are created on the Redshift database you have assigned and the data is loaded to the tables. The first time you run the code, the tables are created and the data is loaded. Every other time when you run the code, the data is appended to the existing tables. You can drop the tables from the assigned database on Redhsift and run the code again. It will create the tables and load data into them.
 
 The diagram below explains the connections between S3, Databricks and Redshift.
 
 
 <img src="Redshift-Databricks.PNG" width="700" height="350">
+
+
+The data from the S3 bucket is loaded into a spark dataframe using the code and the transformation is performed on the Databricks cluster. After the transformation is complete the tables are created on the Redshift database you have assigned and the data is loaded to the tables. The first time you run the code, the tables are created and the data is loaded. Every other time when you run the code, the data is appended to the existing tables. You can drop the tables from the assigned database on Redhsift and run the code again. It will create the tables and load data into them.
+
+
+
+
+
 
 
 
