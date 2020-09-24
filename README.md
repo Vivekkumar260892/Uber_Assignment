@@ -79,13 +79,12 @@ Step 5: Click on libraries option under the clone tab, select "install new" and 
 <img src="Libraries_Installed.PNG" width="700" height="350">
 
 
-Step 6: Go to the workspace tab from the leftside panel. Click on "workspace". Select the drop down icon and click on "import". Choose the "Uber Spark" ipynb notebook from the location you downloaded it to.
+Step 6: Go to the workspace tab from the leftside panel. Click on "workspace". Select the drop down icon and click on "import". Choose the "Uber Spark" ipynb notebook from the location you downloaded it to. Now click on the import button in blue.
+
+Step 7: Once you have opened the notebook. You can go about running the code block by block or at once by clicking on the clear state and run all option.
 
 
 <img src="Notebook.PNG" width="700" height="350">
-
-
-Step 7: Once you have opened the notebook. You can go about running the code block by block or at once by clicking on the 
 
 
   
