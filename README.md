@@ -64,19 +64,19 @@ Step 3: Create an account of Databricks Community edition. https://community.clo
 Step 4: When you have logged in to Databricks, on the leftside pane select on clusters. You can give any name to your cluster and Databricks runtime version stays to default "7.2 (includes Apache Spark 3.0.0, Scala 2.12)". Click on create cluster. 
 
 
-<img src="Databricks_Cluster.PNG" width="700" height="300">
+<img src="Databricks_Cluster.PNG" width="700" height="400">
 
 
 You can see the green circle when the cluster is in active state.
 
 
-<img src="Uber_Cluster.PNG" width="700" height="300">
+<img src="Uber_Cluster.PNG" width="700" height="400">
 
 
 Step 5: Click on libraries option under the clone tab, select "install new" and drop the jar file you downloaded and unzipped in Step 2. Click on the "install" button. You will see the below status. You are all set to run the code now.
 
 
-<img src="Libraries_Installed.PNG" width="700" height="300">
+<img src="Libraries_Installed.PNG" width="700" height="400">
 
 
 Step 6: Go to the workspace tab from the leftside panel. Click on "workspace". Select the drop down icon and click on "import". Choose the "Uber Spark" ipynb notebook from the location you downloaded it to. Now click on the import button in blue.
@@ -84,7 +84,7 @@ Step 6: Go to the workspace tab from the leftside panel. Click on "workspace". S
 Step 7: Once you have opened the notebook. You can go about running the code block by block or at once by clicking on the clear state and run all option.
 
 
-<img src="Notebook.PNG" width="700" height="300">
+<img src="Notebook.PNG" width="700" height="400">
 
 
   
