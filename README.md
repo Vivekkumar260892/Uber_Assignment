@@ -52,10 +52,40 @@ But you will need to spinup a Databricks cluster, which is free on the Databrick
 Also, you can download the S3 browser, if you want to upload or download files in the source s3 bucket. You can use the credentials embedded in my python notebook that you will fork to run the code. S3 browser can be downloaded from the link below. https://s3browser.com/download.aspx
 
 
+4) Steps for Running/Deploying the applicatio:
+
+Step1: Fork this github repository and download the ipynb file named "Uber Spark".
 
 
+Step 2: Click on this link to download the JDBC for Redshift. Click to download the file where it says "JDBC4.2–compatible driver (without the AWS SDK) and driver dependent libraries for AWS SDK files version 1.2.47". Extract the jars from the zip file you downloaded. You need only "RedshiftJDBC42-no-awssdk-1.2.47.1071.jar" file so just keep it in a safe location where you can find it.
+
+Step 3: Create an account of Databricks Community edition. https://community.cloud.databricks.com/login.html . Click on signup and follow the steps. Verify email address and click on the link you get in your email to verify account and create password. 
+
+Step 4: When you have logged in to Databricks, on the leftside pane select on clusters. You can give any name to your cluster and Databricks runtime version stays to default "7.2 (includes Apache Spark 3.0.0, Scala 2.12)". Click on create cluster. 
 
 
+<img src="Databricks_Cluster.PNG" width="700" height="350">
+
+
+You can see the green circle when the cluster is in active state.
+
+
+<img src="Uber_Cluster.PNG" width="700" height="350">
+
+
+Step 5: Click on libraries option under the clone tab, select "install new" and drop the jar file you downloaded and unzipped in Step 2. Click on the "install" button. You will see the below status. You are all set to run the code now.
+
+
+<img src="Libraries_Installed.PNG" width="700" height="350">
+
+
+Step 6: Go to the workspace tab from the leftside panel. Click on "workspace". Select the drop down icon and click on "import". Choose the "Uber Spark" ipynb notebook from the location you downloaded it to.
+
+
+<img src="Notebook.PNG" width="700" height="350">
+
+
+Step 7: Once you have opened the notebook. You can go about running the code block by block or at once by clicking on the 
 
 
   
