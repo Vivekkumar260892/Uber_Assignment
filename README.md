@@ -1,9 +1,10 @@
 # Uber Take Home Exercise
 ## Topics
-### 1)	Data model and Assumptions
-### 2)  ETL Architecture
-### 3)  Requirements
-### 4)	Steps for Running/Deploying the application
+### 1) Data model and Assumptions
+### 2) ETL Architecture
+### 3) Requirements
+### 4) Steps for Running/Deploying the application
+### 5) References
 
 
 1. Data model and Assumptions:
@@ -49,7 +50,7 @@ The diagram below explains the connections between S3, Databricks and Redshift.
 
 The data from the S3 bucket is loaded into a spark dataframe using the code and the transformation is performed on the Databricks cluster. After the transformation is complete the tables are created on the Redshift database you have assigned and the data is loaded to the tables. The first time you run the code, the tables are created and the data is loaded. Every other time when you run the code, the data is appended to the existing tables. You can drop the tables from the assigned database on Redhsift and run the code again. It will create the tables and load data into them.
 
-3) Requirements:
+3. Requirements:
 
 For running this project you will not need any services at the time from your end to hold the data in the source or target databases. I have kept the s3 buckets (source) and Redhsift cluster (target) live for you to run the code for the next few days.
 
@@ -58,7 +59,7 @@ But you will need to spinup a Databricks cluster, which is free on the Databrick
 Also, you can download the S3 browser, if you want to upload or download files in the source s3 bucket. You can use the credentials embedded in my python notebook that you will fork to run the code. S3 browser can be downloaded from the link below. https://s3browser.com/download.aspx
 
 
-4) Steps for Running/Deploying the applicatio:
+4. Steps for Running/Deploying the applicatio:
 
 Step1: Fork this github repository and download the ipynb file named "Uber Spark".
 
@@ -93,5 +94,6 @@ Step 7: Once you have opened the notebook. You can go about running the code blo
 <img src="Notebook.PNG" width="900" height="500">
 
 
-  
+ 5. References:
+ a) https://docs.databricks.com/data/data-sources/aws/amazon-redshift.html
   
