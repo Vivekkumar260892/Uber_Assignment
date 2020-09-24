@@ -17,7 +17,13 @@ My data model consists of three tables. Each of these tables have been extracted
 <img src="Uber_Assignment.PNG" width="700" height="350">
 
 
-b) Assumptions: ----------
+b) Assumptions: 
+
+1) This process is a batch process that runs once every day. The logs are dumped in the S3 bucket through out the day and cleared after the ETL job is complete.
+2) Every day the logs are deleted after the ETL job is run and hence, there cannot be an instance where the same logs were uploaded on 2 different days or stay in the bucket to be processed in two different batches.
+3) The dimensions are unique on a vehicle and function level respectively. In this version we are not considering slowly changing dimensions. All other columns of the two dimension tables are populated using processes that run apart from this process.
+4) This process only adds unique vehicle ids and function ids to the dimension table.
+
 
 2. ETL Architecture:
 
