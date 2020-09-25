@@ -94,6 +94,9 @@ Step 7: Once you have opened the notebook. You can go about running the code blo
 <img src="Notebook.PNG" width="900" height="500">
 
 
+ Step 8: You can now start querying the database on Redshift to perform further analysis on the data using the platform of your choice. Also, the other ETL jobs for populating columns in the dimension table can be scheduled.
+ 
+ 
  5. References:
  a) https://docs.databricks.com/data/data-sources/aws/amazon-redshift.html
   
