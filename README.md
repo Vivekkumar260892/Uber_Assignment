@@ -54,12 +54,12 @@ The data from the S3 bucket is loaded into a spark dataframe using the code and 
 
 For running this project you will not need any services at the time from your end to hold the data in the source or target databases. I have kept the s3 buckets (source) and Redhsift cluster (target) live for you to run the code for the next few days.
 
-But you will need to spinup a Databricks cluster, which is free on the Databricks community edition for running the program. I have explained how you can spinup the cluster and run the forked ipynb file from my github account on the databricks cluster.
+But you will need to spinup a Databricks cluster, which is free on the Databricks community edition for running the program. I have explained how you can spinup the cluster and run the forked ipynb file from my github account on the databricks cluster below.
 
 Also, you can download the S3 browser, if you want to upload or download files in the source s3 bucket. You can use the credentials embedded in my python notebook that you will fork to run the code. S3 browser can be downloaded from the link below. https://s3browser.com/download.aspx
 
 
-4. Steps for Running/Deploying the applicatio:
+4. Steps for Running/Deploying the application:
 
 Step1: Fork this github repository and download the ipynb file named "Uber Spark".
 
