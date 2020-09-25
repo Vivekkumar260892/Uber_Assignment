@@ -96,7 +96,7 @@ Step 7: Once you have opened the notebook. You can go about running the code blo
 
  Step 8: You can now start querying the database on Redshift to perform further analysis on the data using the platform of your choice. Also, the other ETL jobs for populating columns in the dimension table can be scheduled. 
  
- Step 9: You can schedule this code as a spark job by setting up jobs on the Databricks cluster. It gives you a UI based interface for easy scheduling of your jobs.
+ Step 9: You can schedule this code as a daily job on the Databricks cluster. It gives you a UI based interface for easy scheduling of your jobs.
  
  
  5. References:
