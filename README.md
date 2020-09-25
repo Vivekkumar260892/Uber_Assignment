@@ -68,7 +68,7 @@ Step 2: Click on this link to download the JDBC for Redshift. Click to download 
 
 Step 3: Create an account of Databricks Community edition. https://community.cloud.databricks.com/login.html . Click on signup and follow the steps. Verify email address and click on the link you get in your email to verify account and create password. 
 
-Step 4: When you have logged in to Databricks, on the leftside pane select on clusters. You can give any name to your cluster and Databricks runtime version stays to default "7.2 (includes Apache Spark 3.0.0, Scala 2.12)". Click on create cluster. 
+Step 4: When you have logged in to Databricks, on the leftside pane select on clusters. You can give any name to your cluster and Databricks runtime version stays to default "7.2 (Scala 2.12, Spark 3.0.0)". Click on create cluster. 
 
 
 <img src="Databricks_Cluster.PNG" width="900" height="500">
